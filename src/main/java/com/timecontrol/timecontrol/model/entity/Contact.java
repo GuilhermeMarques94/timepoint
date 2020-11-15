@@ -2,6 +2,7 @@ package com.timecontrol.timecontrol.model.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +14,7 @@ import com.timecontrol.timecontrol.util.cpf.ContactType;
 import lombok.Data;
 
 @Data
+@Entity
 public class Contact {
 	
     @Id
