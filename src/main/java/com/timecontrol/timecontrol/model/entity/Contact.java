@@ -33,24 +33,12 @@ public class Contact {
     public ContactType type;
 	
 	private Date createDate;
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
 
 	private Date updateDate;
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
-	}
 	
 	private Date deleteDate;
-	public void setDeleteDate(Date deleteDate) {
-		this.deleteDate = deleteDate;
-	}
 	
 	private Date cancelDate;
-	public void setCancelDate(Date cancelDate) {
-		this.cancelDate = cancelDate;
-	}
 	
 	public void markCreate() {
 		this.createDate = new Date();
