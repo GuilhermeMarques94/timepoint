@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 import com.timecontrol.timecontrol.util.cpf.ContactType;
 
@@ -15,6 +16,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "CONTACT")
 public class Contact {
 	
     @Id
