@@ -45,7 +45,7 @@ public class Account {
 
 	}
 	
-	public void markDeelte() {
+	public void markDelelte() {
 		this.deleteDate = new Date();
 
 	}

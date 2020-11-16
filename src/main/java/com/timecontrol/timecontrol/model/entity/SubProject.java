@@ -50,7 +50,7 @@ public class SubProject {
 
 	}
 	
-	public void markDeelte() {
+	public void markDelelte() {
 		this.deleteDate = new Date();
 
 	}

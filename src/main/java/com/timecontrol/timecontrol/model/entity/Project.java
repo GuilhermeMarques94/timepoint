@@ -42,7 +42,7 @@ public class Project {
 
 	}
 	
-	public void markDeelte() {
+	public void markDelelte() {
 		this.deleteDate = new Date();
 
 	}

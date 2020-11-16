@@ -40,7 +40,7 @@ public class Bank {
 
 	}
 	
-	public void markDeelte() {
+	public void markDelelte() {
 		this.deleteDate = new Date();
 
 	}

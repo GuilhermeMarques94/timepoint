@@ -43,7 +43,7 @@ public class Employees {
 
 	}
 	
-	public void markDeelte() {
+	public void markDelelte() {
 		this.deleteDate = new Date();
 
 	}
