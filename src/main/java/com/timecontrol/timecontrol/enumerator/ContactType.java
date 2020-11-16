@@ -1,4 +1,4 @@
-package com.timecontrol.timecontrol.util.cpf;
+package com.timecontrol.timecontrol.enumerator;
 
 public enum ContactType {
 

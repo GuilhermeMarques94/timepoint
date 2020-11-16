@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.timecontrol.timecontrol.util.cpf.ContactType;
+import com.timecontrol.timecontrol.enumerator.ContactType;
 
 import lombok.Data;
 
