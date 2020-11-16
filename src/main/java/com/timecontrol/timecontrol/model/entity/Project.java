@@ -19,17 +19,22 @@ public class Project {
 	@Id
 	@GeneratedValue(generator = "PROJECT_GENERATOR")
 	@SequenceGenerator(name = "PROJECT_GENERATOR", sequenceName = "PROJECT_SEQUENCE", allocationSize = 1)
+	@Column(name = "ID")
 	private Long id;
 
-	@Column(name = "NAME", nullable = false, length = 5, unique = true)
+	@Column(name = "NAME")
 	private String name;
 
+    @Column(name = "CREATE_DATE")
 	private Date createDate;
 
+    @Column(name = "UPDATE_DATE")
 	private Date updateDate;
 
+    @Column(name = "DELETE_DATE")
 	private Date deleteDate;
 
+    @Column(name = "CANCEL_DATE")
 	private Date cancelDate;
 
 	public void markCreate() {

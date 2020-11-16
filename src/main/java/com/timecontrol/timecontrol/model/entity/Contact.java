@@ -2,6 +2,7 @@ package com.timecontrol.timecontrol.model.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -22,22 +23,29 @@ public class Contact {
     @Id
     @GeneratedValue(generator = "CONTACT_GENERATOR")
     @SequenceGenerator(name = "CONTACT_GENERATOR", sequenceName = "CONTACT_SEQUENCE", allocationSize = 1)
+    @Column(name = "ID")
     private Long id;
     
-    
+    @Column(name = "PERSON")
     @OneToMany(fetch = FetchType.LAZY)
     private Person person;
     
+    @Column(name = "DESCRIPTION")
     private String description;
     
+    @Column(name = "TYPE")
     public ContactType type;
 	
+    @Column(name = "CREATE_DATE")
 	private Date createDate;
 
+    @Column(name = "UPDATE_DATE")
 	private Date updateDate;
-	
+
+    @Column(name = "DELETE_DATE")
 	private Date deleteDate;
-	
+
+    @Column(name = "CANCEL_DATE")
 	private Date cancelDate;
 	
 	public void markCreate() {

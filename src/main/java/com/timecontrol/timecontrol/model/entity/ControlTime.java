@@ -2,6 +2,7 @@ package com.timecontrol.timecontrol.model.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,23 +21,31 @@ public class ControlTime {
     @Id
     @GeneratedValue(generator = "CONTROL_TIME_GENERATOR")
     @SequenceGenerator(name = "CONTROL_TIME_GENERATOR", sequenceName = "CONTROL_TIME__SEQUENCE", allocationSize = 1)
+    @Column(name = "ID")
     private Long id;
     
+    
 	@OneToOne(fetch = FetchType.LAZY)
+	@Column(name = "PROJECT")
 	private Project project;
 	
 	@OneToOne(fetch = FetchType.LAZY)
+	@Column(name = "SUB_PROJECT")
 	private SubProject subProject;
 	
 	
 	
     
+    @Column(name = "CREATE_DATE")
 	private Date createDate;
-	
+
+    @Column(name = "UPDATE_DATE")
 	private Date updateDate;
 
+    @Column(name = "DELETE_DATE")
 	private Date deleteDate;
 
+    @Column(name = "CANCEL_DATE")
 	private Date cancelDate;
 
 	public void markCreate() {
