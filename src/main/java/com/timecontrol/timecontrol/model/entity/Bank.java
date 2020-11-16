@@ -22,8 +22,11 @@ public class Bank {
     @Column(name = "ID")
     private Long id;
     
-    @Column(name = "BANK")
-    private String bank;
+    @Column(name = "CODE", nullable = false, length = 5, unique = true)
+    private String code;
+
+    @Column(name = "NAME", nullable = false, length = 80)
+    private String name;
     
     @Column(name = "CREATE_DATE")
 	private Date createDate;
