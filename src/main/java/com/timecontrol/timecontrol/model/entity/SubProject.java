@@ -47,22 +47,17 @@ public class SubProject {
 
 	public void markCreate() {
 		this.createDate = new Date();
-
 	}
 
 	public void markUpdate() {
 		this.updateDate = new Date();
-
 	}
 	
 	public void markDelelte() {
 		this.deleteDate = new Date();
-
 	}
 	
 	public void markCancel() {
 		this.deleteDate = new Date();
-
 	}
-    
 }

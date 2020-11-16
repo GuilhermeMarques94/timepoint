@@ -24,18 +24,12 @@ public class ControlTime {
     @Column(name = "ID")
     private Long id;
     
-    
 	@OneToOne(fetch = FetchType.LAZY)
-	@Column(name = "PROJECT")
 	private Project project;
 	
 	@OneToOne(fetch = FetchType.LAZY)
-	@Column(name = "SUB_PROJECT")
 	private SubProject subProject;
-	
-	
-	
-    
+
     @Column(name = "CREATE_DATE")
 	private Date createDate;
 
@@ -50,23 +44,17 @@ public class ControlTime {
 
 	public void markCreate() {
 		this.createDate = new Date();
-
 	}
 
 	public void markUpdate() {
 		this.updateDate = new Date();
-
 	}
-	
-	public void markDelelte() {
-		this.deleteDate = new Date();
 
+	public void markDelete() {
+		this.deleteDate = new Date();
 	}
 	
 	public void markCancel() {
 		this.deleteDate = new Date();
-
 	}
-	
-	
 }

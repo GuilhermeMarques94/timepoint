@@ -26,7 +26,6 @@ public class Contact {
     @Column(name = "ID")
     private Long id;
     
-    @Column(name = "PERSON")
     @OneToMany(fetch = FetchType.LAZY)
     private Person person;
     
@@ -50,22 +49,17 @@ public class Contact {
 	
 	public void markCreate() {
 		this.createDate = new Date();
-
 	}
 
 	public void markUpdate() {
 		this.updateDate = new Date();
-
 	}
 	
 	public void markDelelte() {
 		this.deleteDate = new Date();
-
 	}
 	
 	public void markCancel() {
 		this.deleteDate = new Date();
-
 	}
-
 }
