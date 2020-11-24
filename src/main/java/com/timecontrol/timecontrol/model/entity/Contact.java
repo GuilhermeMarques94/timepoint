@@ -1,12 +1,15 @@
 package com.timecontrol.timecontrol.model.entity;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -26,8 +29,9 @@ public class Contact {
     @Column(name = "ID")
     private Long id;
     
-    @OneToMany(fetch = FetchType.LAZY)
-    private Person person;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "person")
+    @JoinColumn(name = "PERSON", referencedColumnName = "ID", nullable = false)
+    private List<Person> person;
     
     @Column(name = "DESCRIPTION")
     private String description;

@@ -1,10 +1,18 @@
 package com.timecontrol.timecontrol.model.entity;
 
-import lombok.Data;
-
-import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.Data;
 
 @Data
 @Entity
@@ -27,10 +35,12 @@ public class Person {
     private String RG;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private List<Contact> contact;
+    @JoinColumn(name = "CONTACT", referencedColumnName = "ID", nullable = false)
+    private Contact contact;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private List<Employees> employees;
+    @JoinColumn(name = "EMPLOYEES", referencedColumnName = "ID", nullable = false)
+    private Employees employees;
 
     @Column(name = "CREATE_DATE")
     private Date createDate;
