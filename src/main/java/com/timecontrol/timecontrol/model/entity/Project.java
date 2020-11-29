@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,6 +19,9 @@ public class Project {
 
     @Column(name = "NAME")
     private String name;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "project")
+    private List<SubProject> subProject;
 
     @Column(name = "CREATE_DATE")
     private Date createDate;

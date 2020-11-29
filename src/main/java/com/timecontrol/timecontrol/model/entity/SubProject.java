@@ -3,15 +3,7 @@ package com.timecontrol.timecontrol.model.entity;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -28,10 +20,9 @@ public class SubProject {
     
     @Column(name = "NAME")
     private String name;
- 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PROJECT", referencedColumnName = "ID", nullable = false)
-    private List<Project> project;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Project project;
     
     @Column(name = "CREATE_DATE")
 	private Date createDate;
